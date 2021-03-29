@@ -42,7 +42,7 @@ int main()
 		printf("(%f,%f,%f)\n", position[0], position[1], position[2]);
 	}
 	*/
-	//--------------------设置指定角度------------------
+	//--------------------设置目标角度------------------
 	for (int i = 1; i <= 6; i++)
 		simxSetFloatSignal(client_id, ("target_pos" + to_string(i)).c_str(), 90 * pi / 180, simx_opmode_oneshot);
 	simxSetFloatSignal(client_id, ("target_pos" + to_string(3)).c_str(), -90 * pi / 180, simx_opmode_oneshot);
